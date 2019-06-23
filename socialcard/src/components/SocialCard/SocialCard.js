@@ -1,14 +1,28 @@
-import React from 'react';
+import React, { Component }  from 'react';
 import CardHead from '../CardHead/CardHead';
 import CardDetails from '../CardDetails/CardDetails';
+import './SocialCard.css';
 
-function SocialCard(){
-    return (
-        <div> 
-            <CardHead />
-            <CardDetails />
-        </div>
-    );
+class SocialCard extends Component{
+    render(){
+        return (
+            <div >
+            { this.createCards() }
+            </div>
+        );
+    };
+
+    createCards = () => {
+        let element = [];
+        for(let i=0;i<5;i++){
+            element.push(<div className="card"> 
+                    <CardHead />
+                    <CardDetails />
+            </div>);
+        }
+        return element;
+    };
+
 }
 
 export default SocialCard;

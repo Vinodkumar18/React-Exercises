@@ -1,13 +1,10 @@
 import React from 'react';
-import NameCard from '../NameCard/NameCard';
+import '../../logo.svg';
 
 
 function CardHead(){
     return (
-        <div>
-            CardHead 
-            <NameCard />
-        </div>
+        <img className="card-img-top" src="https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" /> 
     );
 }
 
