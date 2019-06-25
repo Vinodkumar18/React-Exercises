@@ -1,8 +1,4 @@
-class WebServices {
-    _defaul_config = {
-
-    };
-
+export default class WebServices {
     _getHeaders(headersList) {
         let headers = new Headers();
         for(let header in headersList){
@@ -11,12 +7,22 @@ class WebServices {
         return headersList;
     }
     
-    _getInitConfig(){
-
+    _getRequest(requestObj){
+        let defaultConfig = {
+            method : "GET",
+            headers : {},
+            mode : "cors",
+            cache : "default"
+        };
+        defaultConfig["method"] = requestObj.method;
+        defaultConfig["headers"] = this._getHeaders(requestObj.headers);
+        let request = new Request(requestObj.url, defaultConfig);
+        return request;
     }
 
-    get(url, options){
-        return fetch(url)
-                .then(response => response.json());
+    get(requestObj){
+        return fetch(this._getRequest(requestObj)).then(function(response){
+            return response.json();
+        });
     }
 }
