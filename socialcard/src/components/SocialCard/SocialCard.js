@@ -17,7 +17,7 @@ class SocialCard extends Component{
         for(let i=0;i<5;i++){
             element.push(<div className="card"> 
                     <CardHead />
-                    <CardDetails />
+                    <CardDetails title = {i} description = {"Description" + i} />
             </div>);
         }
         return element;

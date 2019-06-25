@@ -1,0 +1,5 @@
+.weather-body{
+    height: 100%;
+    width: 100%;
+    background: url("../../assets/climates/sunny.jpeg");
+}
