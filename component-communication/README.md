@@ -1,2 +1,3 @@
-Components Communication in React
-1. Using props and state
+# Components Communication in React
+Using props and state
+
