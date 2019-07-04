@@ -1,4 +1,4 @@
-class WebServices {
+export default class WebServices {
     _defaul_config = {
 
     };

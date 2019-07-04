@@ -1,23 +1,21 @@
 import React from 'react';
 
-class Parent extends React.Component {
+export default class Parent extends React.Component {
     constructor(props){
         super(props);
         this.state = {
             "data" : "",
             "recivedData" : ""
         };
-        this.handleChange = this.handleChange.bind(this);
-        this.receiveDataFromChild = this.receiveDataFromChild.bind(this);
     }
 
-    handleChange(event){
+    handleChange = (event) => {
         this.setState({
             "data" : event.target.value
         });
     }
 
-    receiveDataFromChild(event){
+    receiveDataFromChild = (event) => {
         this.setState({
             "recivedData" : event.data
         });
@@ -46,10 +44,9 @@ class Child extends React.Component {
         this.state = {
             "data" : ""
         }
-        this.handleChange = this.handleChange.bind(this);
     }
 
-    handleChange(event){
+    handleChange = (event) => {
         this.setState({
             "data" : event.target.value
         }, () => {
@@ -71,5 +68,3 @@ class Child extends React.Component {
         );
     }
 }
-
-export default Parent;
