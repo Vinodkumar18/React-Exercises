@@ -1,0 +1,22 @@
+.keyboard-button {
+    font-size: 30px;
+    background-color: #E0E0E0;
+    -webkit-appearance: none;
+    border: 0px;
+    border-right: 1px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.keyboard-operations{
+    border-left: 1px solid #DDD; 
+}
+
+.keyboard-operations .keyboard-button{
+    background-color : #f5923e;
+    color: #FFFFFF;
+}
+
+button:focus{
+    outline: transparent;
+}
+
