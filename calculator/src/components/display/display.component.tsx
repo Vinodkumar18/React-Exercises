@@ -1,7 +1,7 @@
 import React from "react";
 
 interface Inputs {
-    "value" : number
+    "value" : string
 }
 
 export class Display extends React.Component<Inputs> {
