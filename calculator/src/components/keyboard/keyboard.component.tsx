@@ -43,7 +43,7 @@ export class Keyboard extends React.Component<Inputs> {
                     <div className="d-flex flex-row">
                         <div className="container-fluid p-0 keyboard-operations">
                                 <button className="col p-4 keyboard-button" onClick={() => this.onKeyboardButtonClicked("÷") } >÷</button>
-                                <button className="col p-4 keyboard-button" onClick={() => this.onKeyboardButtonClicked("X") } >X</button>
+                                <button className="col p-4 keyboard-button" onClick={() => this.onKeyboardButtonClicked("x") } >x</button>
                                 <button className="col p-4 keyboard-button" onClick={() => this.onKeyboardButtonClicked("-") } >-</button>
                                 <button className="col p-4 keyboard-button" onClick={() => this.onKeyboardButtonClicked("+") } >+</button>
                                 <button className="col p-4 keyboard-button" onClick={() => this.onKeyboardButtonClicked("=") } >=</button>
@@ -55,9 +55,6 @@ export class Keyboard extends React.Component<Inputs> {
     }
 
     onKeyboardButtonClicked = (property : String) => {
-        console.log("Button clicked - " + property);
-        if(!isNaN(Number(property))){
-            this.props.action(property);
-        };
+        this.props.action(property);
     }
 }
